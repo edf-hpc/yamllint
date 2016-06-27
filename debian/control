@@ -1,0 +1,26 @@
+Source: yamllint
+Section: devel
+Priority: optional
+Maintainer: Adrien Vergé <adrienverge@gmail.com>
+Build-Depends:
+ debhelper (>=9),
+ python3-all,
+ python3-nose,
+ python3-setuptools,
+ python3-sphinx,
+ python3-yaml,
+Standards-Version: 3.9.8
+Homepage: https://github.com/adrienverge/yamllint
+Vcs-Git: https://github.com/adrienverge/yamllint.git -b packaging
+Vcs-Browser: https://github.com/adrienverge/yamllint/tree/packaging
+
+Package: yamllint
+Architecture: all
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ ${shlibs:Depends},
+Description: Linter for YAML files
+ yamllint does not only check for syntax validity, but for weirdnesses like key
+ repetition and cosmetic problems such as lines length, trailing spaces,
+ indentation, etc.
